@@ -1,8 +1,17 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+div#navbarNav {
+  justify-content: flex-end;
+}
+
+.main {
+  background: url('../images/alfons-morales-YLSwjSy7stw-unsplash.jpg');
+  background-size: cover;
+  height: 100vh;
 }

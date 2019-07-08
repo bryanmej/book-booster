@@ -1,11 +1,15 @@
 const express = require('express');
 const router  = express.Router();
 const User = require('../models/User')
+const bcrypt = require('bcrypt')
+const bcryptSalt = 10
 
 /* GET home page */
 router.get('/', (req, res, next) => {
   res.render('index');
 });
+
+///////signup
 
 router.get('/signup', (req, res, next) => {
   res.render('auth/signup')
@@ -42,6 +46,12 @@ router.post('/signup', async (req, res, next) => {
   .catch(()=>{
     console.log(error)
   })
+})
+
+///////Login
+
+router.get('/login', (req, res, next) => {
+  res.render('auth/login')
 })
 
 module.exports = router;
