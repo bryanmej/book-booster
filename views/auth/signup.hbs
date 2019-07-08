@@ -1,12 +1,21 @@
-<form action="/signup" method="POST">
-  <h2>Sign Up</h2>
-  <label for="username">Username</label>
-  <input type="text" name="username" id="username">
-  <label for="password">Password</label>
-  <input type="password" name="password" id="password" required placeholder="Password">
-  <button type="submit" class="submit">Signup</button>
-</form>
+<head>
 
-{{#if errorMessage}}
-  <div class="error-message">{{ errorMessage }}</div>
-{{/if}}
+</head>
+
+<body>
+  <div class="main text-center text-light">
+    <h3 class="d-flex justify-content-center">Ready to boost your reading??</h3>
+    <form action="/signup" method="POST" class="text-center">
+      <h2 class="display-5">Sign Up</h2>
+      <label for="username" class="btn btn-success">Username</label>
+      <input type="text" name="username" id="username">
+      <label for="password" class="btn btn-success">Password</label>
+      <input type="password" name="password" id="password" required placeholder="Password">
+      <button type="submit" class="btn btn-success">Signup</button>
+    </form>
+
+    {{#if errorMessage}}
+    <div class="error-message">{{ errorMessage }}</div>
+    {{/if}}
+  </div>
+</body>
