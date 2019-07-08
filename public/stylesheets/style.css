@@ -2,7 +2,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
-  color: #00B7FF; }
+  color: white; }
 
 div#navbarNav {
   justify-content: flex-end; }
@@ -10,6 +10,15 @@ div#navbarNav {
 .main {
   background: url("../images/alfons-morales-YLSwjSy7stw-unsplash.jpg");
   background-size: cover;
-  height: 100vh; }
+  height: 100vh;
+  padding-top: 12%; }
+
+.welcome {
+  width: 50%;
+  margin: 0 auto;
+  border: 2px solid white;
+  font-size: 1.3em;
+  background: #212529;
+  padding: 2%; }
 
 /*# sourceMappingURL=style.css.map */
