@@ -24,3 +24,75 @@ div#navbarNav {
   background: #212529;
   padding: 2%;
 }
+
+.book-cover {
+  width: 200px;
+  height: 220px;
+}
+
+.sign-content {
+  background: url('../images/alfons-morales-YLSwjSy7stw-unsplash.jpg');
+  background-size: cover;
+  height: 100vh;
+  padding-top: 8%;
+}
+
+.sign-div {
+  background: #212529;
+  color: white;
+  width: 50%;
+  margin:0 auto;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 2% 8% 5%
+}
+
+.sign-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-input {
+  border-radius: 4px;
+}
+
+.lib-content {
+  background: url('../images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg');
+  background-size: cover;
+}
+
+.prof-content {
+  background: url('../images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+
+.prof-h {
+  -webkit-text-stroke: white 1px;
+}
+
+.log-content {
+  background: url('../images/alfons-morales-YLSwjSy7stw-unsplash.jpg');
+  background-size: cover;
+  height: 100vh;
+  padding-top: 6%;
+}
+
+.log-div {
+  background: #212529;
+  color: white;
+  width: 50%;
+  margin:0 auto;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 2% 8% 5%
+}
+
+.log-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.log-button {
+  margin: 8% 0;
+}

@@ -2,6 +2,7 @@ const mongoose = require("mongoose")
 const { Schema }   = mongoose
 
 const bookSchema = new Schema({
+  image: String,
   title: String,
   review: String,
   author: String,

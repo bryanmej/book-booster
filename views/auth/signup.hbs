@@ -1,12 +1,38 @@
- <h2>Sign Up</h2>
-<form action="/signup" method="POST">
-  <label for="username">Username</label>
-  <input type="text" name="username" id="username">
-  <label for="password">Password</label>
-  <input type="password" name="password" id="password" required placeholder="Password">
-  <button type="submit" class="submit">Signup</button>
-</form>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">BookBooster</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/signup">Sign up <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/profile">Profile</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+ 
+<div class="sign-content"> 
+  <div class="sign-div">  
+    <h2 class="text-center">Sign Up
+      <img src="https://img.icons8.com/color/48/000000/add.png">
+    </h2>
+    <form class="sign-form" action="/signup" method="POST">
+      <label for="username">Username :</label>
+      <input type="text" name="username" class="sign-input" placeholder="ID yourself"><br/>
+      <label for="password">Password :</label>
+      <input type="password" name="password" class="sign-input" required placeholder="********"><br/>
+      <button type="submit" class="sign-input">Register</button>
+    </form>
 
-{{#if errorMessage}}
-  <div class="error-message">{{ errorMessage }}</div>
-{{/if}}
+    {{#if errorMessage}}
+      <div class="error-message">{{ errorMessage }}</div>
+    {{/if}}
+  </div>  
+</div>  

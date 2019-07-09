@@ -12,17 +12,37 @@
         <a class="nav-link" href="/library">Library</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/profile">Logout</a>
+        <a class="nav-link" href="/logout">Logout</a>
       </li>
     </ul>
   </div>
 </nav>
 
+<div class="prof-content">
+  <div class="prof-div">
+    <h2 class="prof-h">Profile</h2>
+    <h3>Welcome {{user.username}}</h3>
+    <h4>Would you like to add a book?</h4>
+    
+    <form action="/profile" method="POST">
+      <label for="">Img url:</label>
+      <input type="text" name="image">
+      
+      <label for="">Title:</label>
+      <input type="text" name="title">
 
-<h2>Profile</h2>
+      <label for="">Author:</label>
+      <input type="text" name="author">
 
-<h3>Welcome {{username}}</h3>
+      <label for="">Review:</label>
+      <input type="text" name="review">
 
-<h4>Would you like to add a book?</h4>
+      <label for="">Rate:</label>
+      <input type="number" name="rating">
 
-<a href="/library">Go to library</a>
+      <button type="submit">ADD</button>
+    </form>
+
+    <a href="/library">Go to library</a>
+  </div>  
+</div>  
