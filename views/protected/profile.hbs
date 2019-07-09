@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/">BookBooster</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,31 +19,48 @@
   </div>
 </nav>
 
-<div class="prof-content">
-  <div class="prof-div">
-    <h2 class="prof-h">Profile</h2>
-    <h3>Welcome {{user.username}}</h3>
-    <h4>Would you like to add a book?</h4>
-    
-    <form action="/profile" method="POST">
-      <label for="">Img url:</label>
-      <input type="text" name="image">
-      
-      <label for="">Title:</label>
-      <input type="text" name="title">
-
-      <label for="">Author:</label>
-      <input type="text" name="author">
-
-      <label for="">Review:</label>
-      <input type="text" name="review">
-
-      <label for="">Rate:</label>
-      <input type="number" name="rating">
-
-      <button type="submit">ADD</button>
+  <div class="prof-content">
+  <h2 class="prof-h text-center">Profile</h2>
+  <div class="prof-div text-center">
+    <h3>Welcome <span class="prof-span">{{user.username}}</span> !</h3>
+    <h4>What would you like to do?</h4>
+    <button class="btn btn-primary">Add a book</button>
+    <form class="prof-form display" action="/profile" method="POST">
+      <div class="row" > 
+        <div class="prof-col col-6">
+          <label>Img url:</label> 
+          <input type="text" name="image">
+        </div>
+        <div class="prof-col col-6">
+          <label>Title:</label>
+          <input type="text" name="title">
+        </div>
+        <div class="prof-col col-6">
+          <label>Author:</label>
+          <input type="text" name="author">
+        </div>
+        <div class="prof-col col-6">
+          <label>Review:</label>
+          <input type="text" name="review">
+        </div>  
+        <div class="prof-col col-6">
+          <label>Rate:</label>
+          <input type="number" name="rating">
+        </div>
+      </div>  
+        <button class="btn btn-purp" type="submit">ADD</button>
     </form>
 
-    <a href="/library">Go to library</a>
+    <div class="instruct">
+      <p class="m-1">To add an image all you have to do is:</p>
+      <ol class="prof-list">
+        <li>1. Go to <a href="https://images.google.com/" target="_blank">Google Images</a></li>
+        <li>2. Type the title of the book</li>
+        <li>3. Right click the image you want and select "copy image address"</li>
+        <li>4. Paste it in img url field</li>
+      </ol>
+    </div>  
+
+    <a href="/library" class="btn btn-success">Go to library</a>
   </div>  
 </div>  
