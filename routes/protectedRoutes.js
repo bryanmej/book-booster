@@ -38,4 +38,15 @@ router.get('/library', ensureLogin.ensureLoggedIn(), (req, res) => {
     })
 })
 
+//Details
+router.get('/details/:bookId', ensureLogin.ensureLoggedIn(), (req, res) => {
+  Book.findById(req.params.bookId)
+  .then(theBook => {
+    res.render('protected/details', { book: theBook})
+  })
+  .catch(error => {
+    console.log('Error whilst retrieving book', error)
+  }) 
+})
+
 module.exports = router;

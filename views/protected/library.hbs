@@ -5,7 +5,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
@@ -18,16 +18,15 @@
   </div>
 </nav>
 
-<div class="lib-content">
-  <h2>Library</h2>
-  <h3>Books</h3>
+<div class="lib-content text-center">
+  <h2 class="lib-h">Library</h2>
   <div class="row">
   {{#each books}}
     <div class="col-4">
-      <p>{{this.title}}</p>
-      <img class="book-cover" src="{{this.image}}" alt="book image" />
-      <p>{{this.rating}}</p>
-      <p>{{this.review}}</p>
+      <div class="lib-book">
+        <p class="lib-title">{{this.title}}</p>
+        <a href="/details/{{this._id}}"><img class="book-cover" src="{{this.image}}" alt="book image" /></a>
+      </div>  
     </div>  
   {{/each}}
   </div>

@@ -1,9 +1,6 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
-a {
-  color: white; }
-
 div#navbarNav {
   justify-content: flex-end; }
 
@@ -21,10 +18,7 @@ div#navbarNav {
   background: #212529;
   padding: 2%; }
 
-.book-cover {
-  width: 200px;
-  height: 220px; }
-
+/*-------------Sign up-----------------*/
 .sign-content {
   background: url("../images/alfons-morales-YLSwjSy7stw-unsplash.jpg");
   background-size: cover;
@@ -47,10 +41,30 @@ div#navbarNav {
 .sign-input {
   border-radius: 4px; }
 
-.lib-content {
-  background: url("../images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg");
-  background-size: cover; }
+/*-------------Log in-----------------*/
+.log-content {
+  background: url("../images/alfons-morales-YLSwjSy7stw-unsplash.jpg");
+  background-size: cover;
+  height: 100vh;
+  padding-top: 6%; }
 
+.log-div {
+  background: #212529;
+  color: white;
+  width: 50%;
+  margin: 0 auto;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 2% 8% 5%; }
+
+.log-form {
+  display: flex;
+  flex-direction: column; }
+
+.log-button {
+  margin: 8% 0; }
+
+/*-------------Profile-----------------*/
 .prof-content {
   background: url("../images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg");
   background-size: cover;
@@ -93,30 +107,73 @@ div#navbarNav {
 
 button.btn.btn-purp {
   color: white;
-  background: purple;
+  background: #6f42c1;
   padding: 1% 5%; }
 
-.log-content {
-  background: url("../images/alfons-morales-YLSwjSy7stw-unsplash.jpg");
+/*-------------Library-----------------*/
+.book-cover {
+  width: 200px;
+  height: 220px; }
+
+.lib-content {
+  background: url("../images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg");
   background-size: cover;
-  height: 100vh;
-  padding-top: 6%; }
+  padding-top: 3%; }
 
-.log-div {
+.lib-h {
+  color: #007bff;
+  -webkit-text-stroke: white 2px;
   background: #212529;
-  color: white;
-  width: 50%;
-  margin: 0 auto;
+  border-radius: 4px;
   border: 2px solid white;
+  width: 20%;
+  margin: 0 auto 3%;
+  padding: 1% 3%; }
+
+div.col-4 {
+  padding: 0 5%;
+  margin-bottom: 1%; }
+
+.lib-title {
+  color: white;
+  margin-top: 4%; }
+
+.lib-book {
+  background: #212529;
+  border-radius: 4px;
+  border: 2px solid white;
+  margin-bottom: 7%;
+  box-shadow: 5px 5px 5px #333, -5px 5px 5px #333;
+  padding-bottom: 10%; }
+
+/*------Details---------*/
+.deets-content {
+  background: url("../images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg");
+  background-size: cover;
+  padding: 3% 0;
+  height: 160vh; }
+
+.deets-div {
+  margin: 0 auto;
+  background: #212529;
+  width: 60%;
+  color: white;
   border-radius: 10px;
-  padding: 2% 8% 5%; }
+  border: 2px solid white;
+  padding: 2% 3%; }
 
-.log-form {
+.deets-info {
+  width: 40%;
+  float: right; }
+
+.deets-form {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding: 6%; }
 
-.log-button {
-  margin: 8% 0; }
+.btn-info {
+  width: 25%;
+  margin: 5% auto; }
 
 .display {
   display: none; }

@@ -4,11 +4,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 }, false);
 
-const btn = document.querySelector('.btn')
+const btn = document.querySelector('.btn-primary')
 const form = document.querySelector('.prof-form')
 const instruct = document.querySelector('.instruct')
+const btn2 = document.querySelector('.btn-warning')
+const form2 = document.querySelector('.deets-form')
 
-btn.onclick = () => {
-  form.classList.toggle('display')
-  instruct.classList.toggle('display')
+if(btn){
+  btn.onclick = () => {
+    form.classList.toggle('display')
+    instruct.classList.toggle('display')
+  }
+}
+
+btn2.onclick = () => {
+  form2.classList.toggle('display')
 }
