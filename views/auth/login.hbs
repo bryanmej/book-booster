@@ -1,15 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/">BookBooster</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-    aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="/signup">Sign up <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="/login">Login</a>
       </li>
       <li class="nav-item">
@@ -21,21 +20,21 @@
 
 <div class="log-content">
   <div class="log-div">
-    <h2 class="text-center">Login<br /><br />
-      <img src="https://img.icons8.com/cotton/64/000000/gender-neutral-user--v1.png">
+    <h2 class="text-center">Login<br/><br/>
+      <img src="./images/gender-neutral-user--v1.png">
     </h2>
     <form action="/login" method="POST" class="log-form">
-
-      <label for="username">Username:</label>
-      <input type="text" name="username">
-      <label for="password">Password:</label>
-      <input type="password" name="password">
-
+    
+        <label for="username">Username:</label>
+        <input type="text" name="username">
+        <label for="password">Password:</label>
+        <input type="password" name="password">
+    
       {{#if message}}
-      <div class="error-message">{{ message }}</div>
+        <div class="error-message">{{ message }}</div>
       {{/if}}
-
-      <input class="log-button" type="submit" value="Submit">
+    
+        <input class="log-button" type="submit" value="Submit">
     </form>
-  </div>
-</div>
+  </div>  
+</div>  

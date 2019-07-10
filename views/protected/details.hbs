@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">BookBooster</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/profile">Profile <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/library">library</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="deets-content">
+  <div class="deets-div">
+    <img src="{{book.image}}" width="350" height="400"/>
+    <div class="deets-info">
+      <h3><u>{{book.title}}</u></h3>
+      <h5>Written by: <i>{{book.author}}</i></h5>
+      <p>Summary:<span class="quotes">"</span>{{book.review}}<span class="quotes">"</span></p>
+      <p>Rating: {{book.rating}}/10</p>
+      <button class="btn btn-warning px-5 py-1">Edit</button>
+
+      <form action="/details/{{book._id}}/delete" method="POST">
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
+      
+  </div>
+    <form class="deets-form display" action="/details/{{book._id}}" method="post">
+      <label>Img URL:</label>
+      <input type="text" name="image" value="{{book.image}}">
+
+      <label for="">Title:</label>
+      <input type="text" name="title" value="{{book.title}}">
+
+      <label for="">Author:</label>
+      <input type="text" name="author" value="{{book.author}}">
+
+      <label for="">Description:</label>
+      <input type="text" name="review" value="{{book.review}}">
+
+      <label for="">Rate:</label>
+      <input type="number" name="rating" value="{{book.rating}}">
+
+      <button class="btn btn-info" type="submit">Update</button>
+    </form>
+      
+    
+  </div>  
+</div>

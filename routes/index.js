@@ -15,10 +15,6 @@ router.get("/signup", (req, res, next) => {
   res.render("auth/signup");
 });
 
-router.get("/library", (req, res, next) => {
-  res.render("auth/library");
-});
-
 router.post("/signup", async (req, res, next) => {
   const username = req.body.username;
   const password = req.body.password;

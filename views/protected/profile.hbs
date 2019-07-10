@@ -1,85 +1,68 @@
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <<<<<<< Updated upstream <a class="navbar-brand" href="#">BookBooster</a>
-    =======
-    <a class="navbar-brand" href="/">BookBooster</a>
-    >>>>>>> Stashed changes
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/login">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/profile">Profile</a>
-        </li>
-      </ul>
-    </div>
+  <a class="navbar-brand" href="/">BookBooster</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/library">Library</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 
-<h2>Profile</h2>
+  <div class="prof-content">
+  <h2 class="prof-h text-center">Profile</h2>
+  <div class="prof-div text-center">
+    <h3>Welcome <span class="prof-span">{{user.username}}</span> !</h3>
+    <h4>What would you like to do?</h4>
+    <button class="btn btn-primary">Add a book</button>
+    <form class="prof-form display" action="/profile" method="POST">
+      <div class="row" > 
+        <div class="prof-col col-6">
+          <label>Img url:</label> 
+          <input type="text" name="image" required>
+        </div>
+        <div class="prof-col col-6">
+          <label>Title:</label required>
+          <input type="text" name="title">
+        </div>
+        <div class="prof-col col-6">
+          <label>Author:</label>
+          <input type="text" name="author">
+        </div>
+        <div class="prof-col col-6">
+          <label>Review:</label>
+          <input type="text" name="review">
+        </div>  
+        <div class="prof-col col-6">
+          <label>Rate:</label>
+          <input type="number" name="rating">
+        </div>
+      </div>  
+        <button class="btn btn-purp" type="submit">Enter</button>
+    </form>
 
-<h3>Welcome {{username}}</h3>
+    <a href="/library" class="btn btn-success">Go to library</a>
 
-<h4>Would you like to add a book?</h4>
+    <div class="instruct">
+      <p class="m-1">To add an image all you have to do is:</p>
+      <ol class="prof-list">
+        <li>1. Go to <a href="https://images.google.com/" target="_blank">Google Images</a></li>
+        <li>2. Type the title of the book</li>
+        <li>3. Right click the image you want and select "copy image address"</li>
+        <li>4. Paste it in img url field</li>
+      </ol>
+    </div>  
 
-<a href="/library">Go to library</a>
-
-<div class="prof-content">
-  <div class="prof-div">
-    <h1 class="prof-h">Profile</h2>
-      <h3>Welcome {{user.username}}</h3>
-      <h4>Would you like to add a book?</h4>
-
-      <form action="/profile" method="POST">
-        <label for="" class="btn btn-success">Img url:</label>
-        <input type="text" name="image">
-
-        <label for="" class="btn btn-success">Title:</label>
-        <input type="text" name="title">
-
-        <label for="" class="btn btn-success">Author:</label>
-        <input type="text" name="author">
-
-        <label for="" class="btn btn-success">Review:</label>
-        <input type="text" name="review">
-
-        <label for="" class="btn btn-success">Rate:</label>
-        <input type="number" name="rating">
-
-        <button type="submit">ADD</button>
-      </form>
-
-      <a href="/library" class="btn btn-success">Go to library</a>
-
-  </div>
-  <button class="btn btn-success btn-quote">Generate Quote</button>
-  <h2>Quote</h2>
-</div>
-
-
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"
-  integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" crossorigin="anonymous">
-  </script>
-
-<script>
-  document.querySelector('.btn-quote').onclick = () => {
-    axios.get(`http://quotes.rest/qod.json`)
-      .then(({ data: { contents } }) => {
-        let quote = contents.quotes[0].quote
-        document.querySelector('h2').innerText = quote
-
-      })
-      .catch(err => {
-        document.querySelector('h2').innerText = quote
-      })
-  }
-</script>
+    
+  </div>  
+</div>  
