@@ -49,4 +49,16 @@ router.get('/details/:bookId', ensureLogin.ensureLoggedIn(), (req, res) => {
   }) 
 })
 
+router.post('/details/:id', (req, res) => {
+  const { title, author, review, rating, image } = req.body
+  Book.updateOne({_id: req.params.id}, {$set:{title:title, author:author, review: review, rating: rating, image: image}}, { new: true })
+  .then(book => {
+    res.redirect('/library')
+  })
+  .catch(error => {
+    console.log(error)
+  })
+
+})
+
 module.exports = router;

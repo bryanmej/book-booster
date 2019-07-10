@@ -23,24 +23,27 @@
   <div class="deets-div">
     <img src="{{book.image}}" width="350" height="400"/>
     <div class="deets-info">
-      <h3>{{book.title}}</h3>
-      <h4>Written by: {{book.author}}</h4>
-      <p>Summary:<span>"</span>{{book.review}}<span>"</span></p>
+      <h3><u>{{book.title}}</u></h3>
+      <h5>Written by: <i>{{book.author}}</i></h5>
+      <p>Summary:<span class="quotes">"</span>{{book.review}}<span class="quotes">"</span></p>
       <p>Rating: {{book.rating}}/10</p>
       <button class="btn btn-warning px-5 py-1">Edit</button>
   </div>
-    <form class="deets-form display" action="/books/edit?book_id={{book._id}}" method="post">
+    <form class="deets-form display" action="/details/{{book._id}}" method="post">
+      <label>Img URL:</label>
+      <input type="text" name="image" value="{{book.image}}">
+
       <label for="">Title:</label>
-      <input type="text" name="title" placeholder="{{book.title}}">
+      <input type="text" name="title" value="{{book.title}}">
 
       <label for="">Author:</label>
-      <input type="text" name="author" placeholder="{{book.author}}">
+      <input type="text" name="author" value="{{book.author}}">
 
       <label for="">Description:</label>
-      <input type="text" name="description" placeholder="{{book.review}}">
+      <input type="text" name="review" value="{{book.review}}">
 
       <label for="">Rate:</label>
-      <input type="number" name="rating" placeholder="{{book.rating}}">
+      <input type="number" name="rating" value="{{book.rating}}">
 
       <button class="btn btn-info" type="submit">Update</button>
     </form>
