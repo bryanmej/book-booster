@@ -15,11 +15,23 @@ router.get("/signup", (req, res, next) => {
   res.render("auth/signup");
 });
 
+<<<<<<< Updated upstream
 router.post("/signup", async (req, res, next) => {
   const username = req.body.username;
   const password = req.body.password;
   const salt = bcrypt.genSaltSync(10);
   const hashPass = bcrypt.hashSync(password, salt);
+=======
+router.get('/library', (req, res, next) => {
+  res.render('auth/library')
+})
+
+router.post('/signup', async (req, res, next) => {
+  const username = req.body.username
+  const password = req.body.password
+  const salt     = bcrypt.genSaltSync(10)
+  const hashPass = bcrypt.hashSync(password, salt)
+>>>>>>> Stashed changes
 
   const users = await User.find({ username });
 
