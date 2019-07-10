@@ -1,5 +1,8 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: url('../images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg');
+  background-size: cover;
+  
 }
 
 div#navbarNav {
@@ -128,6 +131,11 @@ button.btn.btn-purp {
   color: white;
   background: #6f42c1;
   padding: 1% 5%;
+  width: 17.5%;
+}
+
+button.btn.btn-purp:hover {
+  background:#6e42c1af;
 }
 
 /*-------------Library-----------------*/
@@ -170,6 +178,11 @@ div.col-4 {
   margin-bottom: 7%;
   box-shadow: 5px 5px 5px #333, -5px 5px 5px #333;
   padding-bottom: 10%;
+  transition: all 1s;
+}
+
+.lib-book:hover {
+  transform: scale(1.1);
 }
 
 /*------Details---------*/
@@ -203,6 +216,11 @@ div.col-4 {
   display: flex;
   flex-direction: column;
   padding: 6%;
+}
+
+.btn-danger {
+  width: 50%;
+  margin-top: 10%;
 }
 
 .btn-info {

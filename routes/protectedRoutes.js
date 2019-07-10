@@ -61,4 +61,15 @@ router.post('/details/:id', (req, res) => {
 
 })
 
+router.post('/details/:id/delete', (req, res) => {
+  const {id} = req.params
+  Book.findByIdAndRemove(id)
+  .then(deleted => {
+    res.redirect('/profile')
+  })
+  .catch(error => {
+    console.log(error)
+  })
+})
+
 module.exports = router;

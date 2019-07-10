@@ -28,6 +28,11 @@
       <p>Summary:<span class="quotes">"</span>{{book.review}}<span class="quotes">"</span></p>
       <p>Rating: {{book.rating}}/10</p>
       <button class="btn btn-warning px-5 py-1">Edit</button>
+
+      <form action="/details/{{book._id}}/delete" method="POST">
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
+      
   </div>
     <form class="deets-form display" action="/details/{{book._id}}" method="post">
       <label>Img URL:</label>
