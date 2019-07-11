@@ -77,7 +77,7 @@ router.post("/details/:id/delete", (req, res) => {
   const { id } = req.params;
   Book.findByIdAndRemove(id)
     .then(deleted => {
-      res.redirect("/profile");
+      res.redirect("/library");
     })
     .catch(error => {
       console.log(error);
