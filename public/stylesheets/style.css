@@ -20,7 +20,7 @@ div#navbarNav {
   background: #212529;
   padding: 2%; }
 
-/*-------------Sign up-----------------*/
+/*--------------------Sign up-----------------------*/
 .sign-content {
   background: url("../images/alfons-morales-YLSwjSy7stw-unsplash.jpg");
   background-size: cover;
@@ -43,7 +43,7 @@ div#navbarNav {
 .sign-input {
   border-radius: 4px; }
 
-/*-------------Log in-----------------*/
+/*-------------------Log in-----------------------*/
 .log-content {
   background: url("../images/alfons-morales-YLSwjSy7stw-unsplash.jpg");
   background-size: cover;
@@ -66,7 +66,7 @@ div#navbarNav {
 .log-button {
   margin: 8% 0; }
 
-/*-------------Profile-----------------*/
+/*-------------------Profile--------------------*/
 .prof-content {
   background: url("../images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg");
   background-size: cover;
@@ -99,7 +99,7 @@ div#navbarNav {
   font-weight: bold; }
 
 .prof-form {
-  margin: 4%; }
+  margin: 4% 20%; }
 
 .prof-col {
   padding: 2%; }
@@ -110,13 +110,13 @@ div#navbarNav {
 button.btn.btn-purp {
   color: white;
   background: #6f42c1;
-  padding: 1% 5%;
-  width: 17.5%; }
+  width: 27%;
+  padding: 2%; }
 
 button.btn.btn-purp:hover {
   background: #6e42c1af; }
 
-/*-------------Library-----------------*/
+/*--------------------Library--------------------------*/
 .book-cover {
   width: 200px;
   height: 220px; }
@@ -170,20 +170,36 @@ div.col-4 {
   color: white;
   border-radius: 10px;
   border: 2px solid white;
-  padding: 2% 3%; }
+  padding: 2% 0 2% 2%; }
+
+.div-div {
+  display: flex; }
+
+.delete-form {
+  display: inline; }
 
 .deets-info {
-  width: 40%;
-  float: right; }
+  padding: 0 4%; }
 
 .quotes {
-  font-size: 3em;
+  font-size: 1.5em;
   font-family: cursive;
   font-weight: bold;
   color: #007bff; }
 
 .deets-p {
-  font-size: 1.2em; }
+  font-size: 1.3em;
+  margin: 0; }
+
+.pages {
+  -webkit-text-stroke: white 1px;
+  color: #e8e826;
+  font-size: 2em; }
+
+.rating {
+  -webkit-text-stroke: white 1px;
+  color: #007bff;
+  font-size: 2em; }
 
 .deets-form {
   display: flex;
@@ -197,9 +213,13 @@ div.col-4 {
 .deets-input {
   color: #999; }
 
+.btn-warning {
+  width: 37%;
+  margin-right: 5%; }
+
 .btn-danger {
-  width: 50%;
-  margin-top: 10%; }
+  width: 39%;
+  margin: 0; }
 
 .btn-info {
   width: 25%;
@@ -207,5 +227,33 @@ div.col-4 {
 
 .display {
   display: none; }
+
+@media (max-width: 650px) {
+  .welcome {
+    width: 90%; }
+  .log-div {
+    width: 90%; }
+  .sign-div {
+    width: 90%; }
+  .prof-h {
+    width: 50%; }
+  .prof-div {
+    width: inherit;
+    border-left: none;
+    border-right: none;
+    border-radius: 0; }
+  .prof-form {
+    margin: inherit; }
+  button.btn.btn-purp {
+    width: 20%;
+    margin-bottom: 4%;
+    padding: 1%; }
+  .lib-h {
+    width: 50%; }
+  .deets-div {
+    width: inherit; }
+  .div-div {
+    flex-direction: column;
+    align-items: center; } }
 
 /*# sourceMappingURL=style.css.map */

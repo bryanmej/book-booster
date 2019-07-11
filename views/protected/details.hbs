@@ -21,42 +21,42 @@
 
 <div class="deets-content">
   <div class="deets-div">
+    <div class="div-div">
     <img src="{{book.image}}" width="350" height="400"/>
-    <div class="deets-info">
-      <h3 class="mb-3"><u>{{book.title}}</u></h3>
-      <h5>Written by: <i>{{book.author}}</i></h5>
-      <h6>Number of pages left: {{book.pages}}</h6>
-      <p class="deets-p">Summary:<span class="quotes">"</span>{{book.review}}<span class="quotes">"</span></p>
-      <p>Rating: {{book.rating}}/10</p>
-      <button class="btn btn-warning px-5 py-1">Edit</button>
-
-      <form action="/details/{{book._id}}/delete" method="POST">
-        <button type="submit" class="btn btn-danger">Delete</button>
-      </form>
       
-  </div>
+      <div class="deets-info">
+        <h3 class="mb-3"><u>{{book.title}}</u></h3>
+        <h5>Written by:</h5> <i>{{book.author}}</i>
+        <p class="deets-p">Summary:</p><p class="m-0"><span class="quotes">"</span>{{book.review}}<span class="quotes">"</span></p>
+        <h5>Number of pages left: <span class="pages">{{book.pages}}</span></h5>
+        <h5>Rating: <span class="rating">{{book.rating}}</span>/ 10</h5>
+        <button class="btn btn-warning">Edit</button>
+
+        <form class="delete-form" action="/details/{{book._id}}/delete" method="POST">
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+      </div>  
+    </div>
     <form class="deets-form display" action="/details/{{book._id}}" method="post">
       <label>Pages Left:</label>
       <input type="number" name="pages" value="{{book.pages}}">
 
       <label class="deets-label">Img URL:</label>
-      <input class="deets-input display" type="text" name="image" value="{{book.image}}">
+      <input class="deets-input" type="text" name="image" value="{{book.image}}">
 
       <label class="deets-label">Title:</label>
-      <input class="deets-input display" type="text" name="title" value="{{book.title}}">
+      <input class="deets-input" type="text" name="title" value="{{book.title}}">
 
       <label class="deets-label">Author:</label>
-      <input class="deets-input display" type="text" name="author" value="{{book.author}}">
+      <input class="deets-input" type="text" name="author" value="{{book.author}}">
 
       <label class="deets-label">Description:</label>
-      <input class="deets-input display" type="text" name="review" value="{{book.review}}">
+      <input class="deets-input" type="text" name="review" value="{{book.review}}">
 
       <label class="deets-label">Rate:</label>
-      <input class="deets-input display" type="number" name="rating" value="{{book.rating}}">
+      <input class="deets-input" type="number" name="rating" value="{{book.rating}}">
 
       <button class="btn btn-info" type="submit">Update</button>
     </form>
-      
-    
   </div>  
 </div>
