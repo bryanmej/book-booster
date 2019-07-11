@@ -209,13 +209,29 @@ div.col-4 {
 }
 
 .quotes {
-  
+  font-size: 3em;
+  font-family: cursive;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.deets-p {
+  font-size: 1.2em;
 }
 
 .deets-form {
   display: flex;
   flex-direction: column;
   padding: 6%;
+}
+
+.deets-label:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+.deets-input {
+  color: #999
 }
 
 .btn-danger {
