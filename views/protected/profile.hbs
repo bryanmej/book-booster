@@ -36,6 +36,10 @@
           <input type="text" name="title">
         </div>
         <div class="prof-col col-6">
+          <label>No. of Pages:</label>
+          <input type="number" name="pages">
+        </div>
+        <div class="prof-col col-6">
           <label>Author:</label>
           <input type="text" name="author">
         </div>
@@ -62,5 +66,32 @@
         <li>4. Paste it in img url field</li>
       </ol>
     </div>  
+<<<<<<< HEAD
+=======
+
+    
+
+    
+>>>>>>> bryan
   </div>  
-</div>  
+</div> 
+
+<button class="btn-quote">Quote</button>
+    <h1></h1>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"
+   integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" crossorigin="anonymous">
+   </script>
+
+ <script>
+   document.querySelector('.btn-quote').onclick = () => {
+     axios.get(`http://quotes.rest/qod.json`)
+       .then(({ data: { contents } }) => {
+         let quote = contents.quotes[0].quote
+         document.querySelector('h1').innerText = quote
+       })
+       .catch(err => {
+         document.querySelector('h1').innerText = quote
+       })
+   }
+ </script>

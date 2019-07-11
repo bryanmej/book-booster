@@ -1,12 +1,15 @@
 const mongoose = require("mongoose")
 const { Schema }   = mongoose
+const Input = require('../models/Input')
 
 const bookSchema = new Schema({
   image: String,
   title: String,
-  review: String,
   author: String,
-  rating: Number
+  //userInput: [ { type : Schema.Types.ObjectId, ref: 'Input' } ]
+  pages: Number,
+  review: String,
+  rating: Number,
 }, 
 {
   timestamps: true,

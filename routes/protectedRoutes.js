@@ -15,8 +15,8 @@ router.get('/profile', ensureLogin.ensureLoggedIn(), (req, res) => {
 })
 
 router.post('/profile', (req, res, next) => {
-  const { title, author, review, rating, image } = req.body;
-  const newBook = new Book({ title, author, review, rating, image})
+  const { title, author, review, rating, image, pages } = req.body;
+  const newBook = new Book({ title, author, review, rating, image, pages})
   newBook.save()
   .then((book) => {
     res.redirect('/library');
@@ -50,8 +50,8 @@ router.get('/details/:bookId', ensureLogin.ensureLoggedIn(), (req, res) => {
 })
 
 router.post('/details/:id', (req, res) => {
-  const { title, author, review, rating, image } = req.body
-  Book.updateOne({_id: req.params.id}, {$set:{title:title, author:author, review: review, rating: rating, image: image}}, { new: true })
+  const { title, author, review, rating, image, pages } = req.body
+  Book.updateOne({_id: req.params.id}, {$set:{title:title, author:author, review: review, rating: rating, image: image, pages: pages}}, { new: true })
   .then(book => {
     res.redirect('/library')
   })

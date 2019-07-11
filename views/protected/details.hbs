@@ -23,9 +23,10 @@
   <div class="deets-div">
     <img src="{{book.image}}" width="350" height="400"/>
     <div class="deets-info">
-      <h3><u>{{book.title}}</u></h3>
+      <h3 class="mb-3"><u>{{book.title}}</u></h3>
       <h5>Written by: <i>{{book.author}}</i></h5>
-      <p>Summary:<span class="quotes">"</span>{{book.review}}<span class="quotes">"</span></p>
+      <h6>Number of pages left: {{book.pages}}</h6>
+      <p class="deets-p">Summary:<span class="quotes">"</span>{{book.review}}<span class="quotes">"</span></p>
       <p>Rating: {{book.rating}}/10</p>
       <button class="btn btn-warning px-5 py-1">Edit</button>
 
@@ -35,20 +36,23 @@
       
   </div>
     <form class="deets-form display" action="/details/{{book._id}}" method="post">
-      <label>Img URL:</label>
-      <input type="text" name="image" value="{{book.image}}">
+      <label>Pages Left:</label>
+      <input type="number" name="pages" value="{{book.pages}}">
 
-      <label for="">Title:</label>
-      <input type="text" name="title" value="{{book.title}}">
+      <label class="deets-label">Img URL:</label>
+      <input class="deets-input display" type="text" name="image" value="{{book.image}}">
 
-      <label for="">Author:</label>
-      <input type="text" name="author" value="{{book.author}}">
+      <label class="deets-label">Title:</label>
+      <input class="deets-input display" type="text" name="title" value="{{book.title}}">
 
-      <label for="">Description:</label>
-      <input type="text" name="review" value="{{book.review}}">
+      <label class="deets-label">Author:</label>
+      <input class="deets-input display" type="text" name="author" value="{{book.author}}">
 
-      <label for="">Rate:</label>
-      <input type="number" name="rating" value="{{book.rating}}">
+      <label class="deets-label">Description:</label>
+      <input class="deets-input display" type="text" name="review" value="{{book.review}}">
+
+      <label class="deets-label">Rate:</label>
+      <input class="deets-input display" type="number" name="rating" value="{{book.rating}}">
 
       <button class="btn btn-info" type="submit">Update</button>
     </form>
