@@ -59,15 +59,16 @@
     </form>
 
     <div class="instruct">
-      <p class="m-1">- To add an image all you have to do is:</p>
+      <p class="m-1">* To add an image all you have to do is:</p>
       <ol class="prof-list m-0">
         <li>1. Go to <a href="https://images.google.com/" target="_blank">Google Images</a></li>
         <li>2. Type the title of the book</li>
         <li>3. Right click the image you want and select "copy image address"</li>
         <li>4. Paste it in img url field</li>
       </ol>
-      <p class="">- We get 1 different quote a day because it is special for that day</p>
+      <p class="">* We get 1 different quote a day because it is special for that day</p>
       <h2></h2>
+      <i></i>
     </div>   
   </div>  
 </div> 
@@ -81,11 +82,14 @@
     axios.get(`https://quotes.rest/qod.json`)
       .then(({ data: { contents } }) => {
         let quote = contents.quotes[0].quote
+        let author = contents.quotes[0].author
         document.querySelector('h2').innerText = quote
+        document.querySelector('i').innerText = `- ${author}`
       })
       .catch(err => {
         console.log(err)
       })
-    document.querySelector('h2').classList.toggle('display')  
+      document.querySelector('h2').classList.toggle('display') 
+      document.querySelector('i').classList.toggle('display') 
   }
 </script>
