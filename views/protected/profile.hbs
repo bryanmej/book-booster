@@ -19,7 +19,7 @@
 </nav>
 
 <div class="prof-content text-center">
-  <h2 class="prof-h">Profile</h2>
+  <h1 class="prof-h">Profile</h1>
   <div class="prof-div">
     <h3>Welcome <span class="prof-span">{{user.username}}</span> !</h3>
     <h4>What would you like to do?</h4>
@@ -59,14 +59,15 @@
     </form>
 
     <div class="instruct">
-      <p class="m-1">To add an image all you have to do is:</p>
-      <ol class="prof-list">
+      <p class="m-1">- To add an image all you have to do is:</p>
+      <ol class="prof-list m-0">
         <li>1. Go to <a href="https://images.google.com/" target="_blank">Google Images</a></li>
         <li>2. Type the title of the book</li>
         <li>3. Right click the image you want and select "copy image address"</li>
         <li>4. Paste it in img url field</li>
       </ol>
-      <h1></h1>
+      <p class="">- We get 1 different quote a day because it is special for that day</p>
+      <h2></h2>
     </div>   
   </div>  
 </div> 
@@ -76,15 +77,15 @@
 </script>
 
 <script>
-  document.querySelector('.btn-quote').onclick = () => {
-    document.querySelector('h1').classList.toggle('display')  
+  document.querySelector('.btn-quote').onclick = () => {  
     axios.get(`https://quotes.rest/qod.json`)
       .then(({ data: { contents } }) => {
         let quote = contents.quotes[0].quote
-        document.querySelector('h1').innerText = quote
+        document.querySelector('h2').innerText = quote
       })
       .catch(err => {
         console.log(err)
       })
+    document.querySelector('h2').classList.toggle('display')  
   }
 </script>

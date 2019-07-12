@@ -101,6 +101,9 @@ div#navbarNav {
   font-size: 1.5em;
   font-weight: bold; }
 
+.instruct {
+  padding: 0 4%; }
+
 .prof-form {
   margin: 4% 20%; }
 
