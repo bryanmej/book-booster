@@ -82,6 +82,9 @@ div#navbarNav {
   border: 2px solid white;
   padding: 1% 0 3%; }
 
+.row {
+  padding: 6%; }
+
 .prof-h {
   color: #007bff;
   -webkit-text-stroke: white 2px;
