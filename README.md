@@ -15,7 +15,7 @@ When adding a book you must provide: Title, author, No. of pages, rating, commen
 
 If you click on a book in the library it will take you to the details of the book and will give you the option to edit
 
-**Makeshift user **
-username: abc
+**Makeshift user **<br/>
+username: abc<br/>
 password: 123
 
