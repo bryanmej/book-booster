@@ -1,12 +1,12 @@
-const express = require('express');
-const router  = express.Router();
+const express = require('express')
+const router  = express.Router()
 const ensureLogin = require("connect-ensure-login")
 const Book = require('../models/Book')
 
 //Logout
 router.get('/logout', (req, res) => {
-  req.logout();
-  res.redirect('/');
+  req.logout()
+  res.redirect('/')
 })
 
 //Profile
@@ -19,7 +19,7 @@ router.post('/profile', (req, res, next) => {
   const newBook = new Book({ title, author, review, rating, image, pages})
   newBook.save()
   .then((book) => {
-    res.redirect('/library');
+    res.redirect('/library')
   })
   .catch((error) => {
     console.log(error);
@@ -30,11 +30,10 @@ router.post('/profile', (req, res, next) => {
 router.get('/library', ensureLogin.ensureLoggedIn(), (req, res) => {
   Book.find()
     .then(allTheBooksFromDB => {
-      // console.log('Retrieved books from DB:', allTheBooksFromDB);
-      res.render('protected/library', { books: allTheBooksFromDB });
+      res.render('protected/library', { books: allTheBooksFromDB })
     })
     .catch(error => {
-      console.log('Error while getting the books from the DB: ', error);
+      console.log('Error while getting the books from the DB: ', error)
     })
 })
 
@@ -51,7 +50,10 @@ router.get('/details/:bookId', ensureLogin.ensureLoggedIn(), (req, res) => {
 
 router.post('/details/:id', (req, res) => {
   const { title, author, review, rating, image, pages } = req.body
-  Book.updateOne({_id: req.params.id}, {$set:{title:title, author:author, review: review, rating: rating, image: image, pages: pages}}, { new: true })
+  Book.updateOne(
+    {_id: req.params.id}, 
+    {$set:{title:title, author:author, review: review, rating: rating, image: image, pages: pages}}, 
+    { new: true })
   .then(book => {
     res.redirect('/library')
   })
@@ -72,4 +74,4 @@ router.post('/details/:id/delete', (req, res) => {
   })
 })
 
-module.exports = router;
+module.exports = router

@@ -1,17 +1,15 @@
-const express = require('express');
-const router  = express.Router();
+const express = require('express')
+const router  = express.Router()
 const passport = require('passport')
 const bcrypt = require('bcrypt')
 const User = require('../models/User')
-const protected = require('./protectedRoutes')
 
-
-/* GET home page */
+///////Home
 router.get('/', (req, res, next) => {
-  res.render('index');
+  res.render('index')
 });
 
-///////signup
+///////Signup
 router.get('/signup', (req, res, next) => {
   res.render('auth/signup')
 })
@@ -33,8 +31,8 @@ router.post('/signup', async (req, res, next) => {
   if (username === "" || password === "") {
     res.render("auth/signup", {
       errorMessage: "Indicate a username and a password to sign up"
-    });
-    return;
+    })
+    return
   }
 
   User.create({
@@ -61,6 +59,4 @@ router.post('/login', passport.authenticate("local", {
   passReqToCallback: true
 }))
 
-
-
-module.exports = router;
+module.exports = router

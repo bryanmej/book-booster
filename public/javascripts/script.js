@@ -19,8 +19,10 @@ if(btn){
   }
 }
 
-btn2.onclick = () => {
+if(btn2){
+  btn2.onclick = () => {
   form2.classList.toggle('display')
+  }
 }
 
 label.onclick = () => {
